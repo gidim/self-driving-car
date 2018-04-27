@@ -57,7 +57,7 @@ def preprocess(frame_bgr, verbose=False):
     return frame_resized.astype('float32')
 
 
-def load_data_batch(data, batchsize=CONFIG['batchsize'], data_dir='data', augment_data=True, bias=0.5):
+def load_data_batch(data, batchsize=CONFIG['batchsize'], data_dir="../../Behavioral-Cloning/data", augment_data=True, bias=0.5):
     """
     Load a batch of driving data from the "data" list.
     A batch of data is constituted by a batch of frames of the training track as well as the corresponding
@@ -136,7 +136,7 @@ def load_data_batch(data, batchsize=CONFIG['batchsize'], data_dir='data', augmen
     return X, y_steer
 
 
-def generate_data_batch(data, batchsize=CONFIG['batchsize'], data_dir='data', augment_data=True, bias=0.5):
+def generate_data_batch(data, batchsize=CONFIG['batchsize'],  data_dir="../../Behavioral-Cloning/data/", augment_data=True, bias=0.5):
     """
     Generator that indefinitely yield batches of training data
 
